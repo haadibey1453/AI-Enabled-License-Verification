@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap's CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body class="login-body ">
+    <div class="login-container">
+        <form action="{% url 'login' %}" method="POST" class="login-form">
+            {% csrf_token %}
+            <h1>Login</h1>
+
+            <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="username" name="username" required >
+                <label for="username">Username</label>
+            </div>
+            <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            {% if error_message %}
+            <div class="text-center" style="color: red; font-weight:200; font-size:18px;">
+                {{ error_message }}
+            </div>
+            {% endif %} 
+            <input type="submit" value="Login" class="login-btn">
+        </form>
+    </div>      
+    <!--Bootstrap's JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

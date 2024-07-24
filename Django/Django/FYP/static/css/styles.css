@@ -1,0 +1,391 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;   
+}
+
+/* Login Page */
+.login-body {
+    background-image: linear-gradient(to bottom, #0e3439, #103d41, #144749, #185050, #1d5a57);
+    background-attachment: fixed;
+    color: #6DA5C0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container{
+    height: 400px;
+    width: 350px;
+    border-radius: 15px 40px 15px 40px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5),
+                -15px -15px 20px #0e3439;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #6DA5C0;
+    font-weight: 600;
+    margin: 10px 0px 50px 0px;
+}
+
+.input-box{
+    position: relative;
+    width: 300px;
+    border-bottom: 1px solid #6DA5C0;
+    margin: 40px 0px 20px 0px;
+    padding: 0px 28px 5px 2px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+    font-weight: 600;
+}
+
+.fas{
+    position: absolute;
+    right: 5px;
+    line-height: 20px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -15px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #0F959C;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.login-btn:hover {
+    background-color: rgba(20, 119, 124);
+} 
+
+.login-btn:active, .login-btn:focus{
+    border: none;
+    outline: none;
+}
+
+
+/* Home Page */
+
+.home-body {
+    background-image: linear-gradient(to bottom, #0e3439, #103d41, #144749, #185050, #1d5a57);
+    background-attachment: fixed;
+    color: #6DA5C0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logout-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;       
+}
+
+#logout-btn:hover{
+    transform: scale(1.4);
+}
+
+.video-container {
+    position: relative;
+    /* background-color: #072E33; */
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    width: 80vw;
+    max-width: 800px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transform: scaleX(-1); */
+}
+
+#capture-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    background-color: #0F959C;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transform: translateX(50%);
+}
+
+#capture-btn:hover{
+    background-color: rgba(20, 119, 124);
+}
+
+#capture-btn:active, #capture-btn:focus, #logout-btn:active, #logout-btn:focus{
+    outline: none;
+    border: none;
+}
+
+.modal-body img{
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Display Page */
+
+.display-body {
+    background-image: linear-gradient(to bottom, #0e3439, #103d41, #144749, #185050, #1d5a57);
+    background-attachment: fixed;
+    color: #6DA5C0;
+}
+
+.container {
+    max-width: 90%;
+    width: 100%;
+}
+
+#captured-image{
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.license_info_card{
+    /* background-color: #072E33; */
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: rgb(225, 225, 225);
+}
+.immg{
+    max-width: 100%;
+    height: 300px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.immg img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    padding: 0 auto 20px auto;
+    object-fit: contain;
+    /* overflow: hidden; */
+    
+}
+.violation_image{
+    max-width: 100%;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.violation_image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    padding: 0 auto 20px auto;
+    object-fit: contain;
+    /* overflow: hidden; */
+    
+}
+/* slide container */
+.scroll-container{
+    overflow: auto;
+    white-space: nowrap;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5),
+    -15px -15px 20px #0e3439;
+}
+.image_container {
+    display: inline-flex;
+}
+.item{
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Carousal */
+/* .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        color: white !important;
+    } */
+.license_info_card .details {
+    font-size: 14px;
+    line-height: 2;
+}
+.license_info_card label {
+    font-weight: 800;
+}
+.license_info_card hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-color: #0F959C;
+}
+
+.details span {
+    word-wrap: break-word;
+    color: rgb(221, 221, 221);
+    text-align: justify;
+}
+
+.appbutton, .decbutton {
+    padding: 10px 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    width: 150px;
+}
+.button-container {
+    text-align: center;
+    margin: 20px 0px;
+}
+.appbutton {
+    background-color: #007BFF;
+}
+.appbutton:hover{
+    background-color: rgb(0, 86, 179);
+}
+
+.appbutton:active, .appbutton:focus, .decbutton:active, .appbutton:focus{
+    outline: none;
+    border: none;
+}
+
+.decbutton {
+    background-color: rgb(255, 61, 61);
+    margin-left: 20px;
+}
+.decbutton:hover{
+    background-color: rgb(185, 36, 36);
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: #072E33 !important; 
+    color: #FFFFFF !important;
+}
+
+.modal-dialog {
+    background-color: transparent; 
+    border: none; 
+}
+
+::placeholder{
+    color: rgba(202, 202, 202, 0.8) !important;
+}
+/* Loading div */
+.loader {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    margin-right: 20px;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: #25b09b;
+    animation: l15 1s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: l15 2s infinite;
+  }
+  .loader::after {
+    margin: 8px;
+    animation-duration: 3s;
+  }
+  @keyframes l15{ 
+    100%{transform: rotate(1turn)}
+  }
+/* Loading Screen */
+/* .loader {
+    border: 10px solid #c3c1c1cc;
+    border-top: 10px solid #066db3;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #21909e; 
+    border-radius: 5px;
+}  
+
+::-webkit-scrollbar-thumb {
+    background: rgba(20, 119, 124); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:#21909e; 
+}
